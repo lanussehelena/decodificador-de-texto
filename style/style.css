@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-001: #0A3871;
+    --cor-002: #FFFFFF;
+    --cor-003: #495057;
+    --cor-004: #343A40;
+    --cor-005: #F3F5FC;
+    --cor-006: #000000;
+    --cor-007: #E8E8E8;
+    --cor-008: #9B9797;
+    --cor-009: #D8DFE8;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-005);
+    font-family: "Inter", sans-serif;
+}
+
+.cabecalho {
+    padding: 2%;
+}
+
+.conteudo {
+    display: flex;
+    padding: 4% 12%;
+    gap: 80px;
+}
+
+.conteudo_principal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+}
+
+.conteudo_principal h1 {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--cor-001);
+}
+
+.conteudo_principal input {
+    height: 600px;
+}
+
+.alerta {
+    display: flex;
+    gap: 5px;
+    font-size: 0.75rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.botao-criptografar {
+    background-color: var(--cor-001);
+    color: var(--cor-002);
+    font-size: 1rem;
+    padding: 20px 80px;
+    border-radius: 24px;
+}
+
+.botao-descriptografar {
+    background-color: var(--cor-009);
+    color: var(--cor-001);
+    font-size: 1rem;
+    padding: 20px 80px;
+    border-radius: 24px;
+}
+
+.conteudo-texto-criptografado {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-002);
+    border-radius: 32px;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+    margin: 20px;
+}
