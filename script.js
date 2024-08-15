@@ -29,26 +29,50 @@ botaoCopiar.addEventListener("click", () => {
     navigator.clipboard.writeText(valorTextoCripto)
 });
 
-botaoCriptografar.addEventListener("click", criptografar);
+botaoCriptografar.addEventListener("click", () => {
+    criptografia(mapeamento, texto.value)
+});
 
-botaoDescriptografar.addEventListener("click", descriptografar);
+botaoDescriptografar.addEventListener("click", () => {
+    criptografia(mapeamentoInverso, valorTextoCripto)
+});
+
 
 // function criptografar() {
-//     const textoArray = texto.value.split("");
-//     const textoMapeado = textoArray.map((valor) => {
-//         return mapeamento[valor] ? mapeamento[valor] : valor;
-//     })
-//     const textoCriptografado = textoMapeado.join("");
-//     valorTextoCripto = textoCriptografado
-//     subtituirConteudoImg.classList.add("esconder-conteudo");
-//     subtituirConteudoH2.classList.add("esconder-conteudo");
+//     const mapeamentoChaves = Object.keys(mapeamento);
+//     let textoCriptografado = texto.value;
+//     mapeamentoChaves.forEach(element => {
+//         textoCriptografado = textoCriptografado.replaceAll(element, (match) => {
+//           return mapeamento[match]
+//         });
+//     });
+//     valorTextoCripto = textoCriptografado;
 //     subtituirParagrafo.innerHTML = textoCriptografado;
-//     botaoCopiar.classList.add("mostrar-conteudo");
+//     subtituirConteudo();
 // }
 
-function criptografar() {
+// function descriptografar() {
+//     const mapeamentoChaves = Object.keys(mapeamentoInverso);
+//     let textoDescriptografado = valorTextoCripto;
+//     mapeamentoChaves.forEach(element => {
+//         textoDescriptografado = textoDescriptografado.replaceAll(element, (match) => {
+//           return mapeamentoInverso[match]
+//         });
+//     });
+//     valorTextoCripto = textoDescriptografado;
+//     subtituirParagrafo.innerHTML = textoDescriptografado;
+//     subtituirConteudo();
+// }
+
+function subtituirConteudo() {
+    subtituirConteudoImg.classList.add("esconder-conteudo");
+    subtituirConteudoH2.classList.add("esconder-conteudo");
+    botaoCopiar.classList.add("mostrar-conteudo");
+}
+
+function criptografia(mapeamento, valorTexto) {
     const mapeamentoChaves = Object.keys(mapeamento);
-    let textoCriptografado = texto.value;
+    let textoCriptografado = valorTexto;
     mapeamentoChaves.forEach(element => {
         textoCriptografado = textoCriptografado.replaceAll(element, (match) => {
           return mapeamento[match]
@@ -57,23 +81,4 @@ function criptografar() {
     valorTextoCripto = textoCriptografado;
     subtituirParagrafo.innerHTML = textoCriptografado;
     subtituirConteudo();
-}
-
-function descriptografar() {
-    const mapeamentoChaves = Object.keys(mapeamentoInverso);
-    let textoDescriptografado = valorTextoCripto;
-    mapeamentoChaves.forEach(element => {
-        textoDescriptografado = textoDescriptografado.replaceAll(element, (match) => {
-          return mapeamentoInverso[match]
-        });
-    });
-    valorTextoCripto = textoDescriptografado;
-    subtituirParagrafo.innerHTML = textoDescriptografado;
-    subtituirConteudo();
-}
-
-function subtituirConteudo() {
-    subtituirConteudoImg.classList.add("esconder-conteudo");
-    subtituirConteudoH2.classList.add("esconder-conteudo");
-    botaoCopiar.classList.add("mostrar-conteudo");
 }
