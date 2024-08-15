@@ -8,14 +8,13 @@
 </head>
 <body>
     <header class="cabecalho">
-        <img src="./assets/Frame 6.png" alt="Logomarca">
+        <img src="./imagens/logo.png" alt="Logomarca">
     </header>
     <main class="conteudo">
         <section class="conteudo_principal">
-            <h1>Digite o seu texto</h1>
-            <input type="text">
+            <textarea name="texto" class="area-texto" placeholder="Digite seu texto"></textarea>
             <div class="alerta">
-                <img src="./assets/bi_exclamation-circle-fill.png" alt="ponto de exclamação">
+                <img src="./imagens/esclamacao.png" alt="ponto de exclamação">
                 <p>Apenas letras minúsculas e sem acento.</p>
             </div>
             <div class="botoes">
@@ -24,14 +23,15 @@
             </div>
         </section>
         <section class="conteudo-texto-criptografado">
-            <img src="./assets/High quality products 1 1.png" alt="Imagem pessoas com uma lupa">
-            <h2>Nenhuma mensagem encontrada</h2>
-            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-        </section>
-            
+            <img class="substituir-conteudo-img" src="./imagens/imagem_lupa.png" alt="Imagem pessoas com uma lupa">
+            <h2 class="substituir-conteudo-h2">Nenhuma mensagem encontrada</h2>
+            <p class="substituir-conteudo-paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <button class="botao-copiar">Copiar</button>
+        </section>           
     </main>
     <footer>
 
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

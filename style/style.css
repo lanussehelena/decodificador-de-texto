@@ -10,6 +10,7 @@
     --cor-007: #E8E8E8;
     --cor-008: #9B9797;
     --cor-009: #D8DFE8;
+    --cor-010: #356EA9;
 
     --fonte-primaria: "Krona One", sans-serif;
     --fonte-secundaria: "Montserrat", sans-serif;
@@ -24,6 +25,7 @@ body {
     box-sizing: border-box;
     background-color: var(--cor-005);
     font-family: "Inter", sans-serif;
+    height: 100%;
 }
 
 .cabecalho {
@@ -43,14 +45,28 @@ body {
     width: 70%;
 }
 
-.conteudo_principal h1 {
-    font-weight: 400;
+.conteudo_principal label {
     font-size: 2rem;
+    font-weight: 400;
     color: var(--cor-001);
 }
 
-.conteudo_principal input {
-    height: 600px;
+.area-texto {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--cor-001);
+    font-family: "Inter", sans-serif;
+}
+
+.area-texto::placeholder {
+    color: var(--cor-001);
 }
 
 .alerta {
@@ -69,7 +85,13 @@ body {
     color: var(--cor-002);
     font-size: 1rem;
     padding: 20px 80px;
+    border: solid 1px var(--cor-001);
     border-radius: 24px;
+    cursor: pointer;
+}
+
+.botao-criptografar:hover {
+    background-color: var(--cor-010);
 }
 
 .botao-descriptografar {
@@ -77,17 +99,56 @@ body {
     color: var(--cor-001);
     font-size: 1rem;
     padding: 20px 80px;
+    border: solid 1px var(--cor-001);
     border-radius: 24px;
+    cursor: pointer;
 }
+
+.botao-descriptografar:hover {
+    background-color: var(--cor-008);
+}
+
 
 .conteudo-texto-criptografado {
     display: flex;
     flex-direction: column;
+    width: 30%;
+    min-height: 500px;
     background-color: var(--cor-002);
     border-radius: 32px;
     align-items: center;
     justify-content: center;
     gap: 32px;
     text-align: center;
-    margin: 20px;
+    padding: 32px;
+}
+
+.conteudo-texto-criptografado img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.conteudo-texto-criptografado h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-004);
+}
+
+.conteudo-texto-criptografado p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-003);
+}
+
+.botao-copiar {
+    display: none;
+}
+
+.esconder-conteudo {
+    display: none;
+}
+
+.mostrar-conteudo {
+    display: block;
 }
