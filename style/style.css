@@ -78,6 +78,7 @@ body {
 .botoes {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 5%;
 }
 
 .botao-criptografar {
@@ -143,6 +144,14 @@ body {
 
 .botao-copiar {
     display: none;
+    background-color: var(--cor-002);
+    color: var(--cor-001);
+    font-size: 1rem;
+    padding: 20px 80px;
+    border: solid 1px var(--cor-001);
+    border-radius: 24px;
+    cursor: pointer;
+    align-items: flex-end;
 }
 
 .esconder-conteudo {
@@ -151,4 +160,45 @@ body {
 
 .mostrar-conteudo {
     display: block;
+}
+
+@media (max-width: 800px) {
+    .cabecalho{
+        margin-left: -10;
+    }
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        padding: 7%;
+        gap: 10px;
+    }
+    .conteudo_principal {
+        margin: 0px;
+        width: 100%;
+    }
+    .area-texto {
+        height: 500px;
+    }
+    .botoes {
+        display: flex;
+        justify-content: space-between;
+    }
+    .conteudo-texto-criptografado {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 0px;
+        gap: 10px;
+        text-align: center;
+    }
+    .conteudo-texto-criptografado img {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }    
 }

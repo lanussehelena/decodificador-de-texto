@@ -34,35 +34,8 @@ botaoCriptografar.addEventListener("click", () => {
 });
 
 botaoDescriptografar.addEventListener("click", () => {
-    criptografia(mapeamentoInverso, valorTextoCripto)
+    criptografia(mapeamentoInverso, texto.value)
 });
-
-
-// function criptografar() {
-//     const mapeamentoChaves = Object.keys(mapeamento);
-//     let textoCriptografado = texto.value;
-//     mapeamentoChaves.forEach(element => {
-//         textoCriptografado = textoCriptografado.replaceAll(element, (match) => {
-//           return mapeamento[match]
-//         });
-//     });
-//     valorTextoCripto = textoCriptografado;
-//     subtituirParagrafo.innerHTML = textoCriptografado;
-//     subtituirConteudo();
-// }
-
-// function descriptografar() {
-//     const mapeamentoChaves = Object.keys(mapeamentoInverso);
-//     let textoDescriptografado = valorTextoCripto;
-//     mapeamentoChaves.forEach(element => {
-//         textoDescriptografado = textoDescriptografado.replaceAll(element, (match) => {
-//           return mapeamentoInverso[match]
-//         });
-//     });
-//     valorTextoCripto = textoDescriptografado;
-//     subtituirParagrafo.innerHTML = textoDescriptografado;
-//     subtituirConteudo();
-// }
 
 function subtituirConteudo() {
     subtituirConteudoImg.classList.add("esconder-conteudo");
